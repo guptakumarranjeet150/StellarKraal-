@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "ANALYZE=true next build",
-    "start": "next start",
+    "start": "node init && next start",
     "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
     "lint:i18n": "node scripts/validate-i18n.js",
     "test": "jest --passWithNoTests",
@@ -20,7 +20,7 @@
     "format": "prettier --write src",
     "format:check": "prettier --check src",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
